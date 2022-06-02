@@ -1,0 +1,33 @@
+# /etc/conf.d/holdd: config file for /etc/init.d/holdd
+
+# Config file location
+#HOLDD_CONFIGFILE="/etc/hold/hold.conf"
+
+# What directory to write pidfile to?  (created and owned by $HOLDD_USER)
+#HOLDD_PIDDIR="/var/run/holdd"
+
+# What filename to give the pidfile
+#HOLDD_PIDFILE="${HOLDD_PIDDIR}/holdd.pid"
+
+# Where to write holdd data (be mindful that the blockchain is large)
+#HOLDD_DATADIR="/var/lib/holdd"
+
+# User and group to own holdd process
+#HOLDD_USER="hold"
+#HOLDD_GROUP="hold"
+
+# Path to holdd executable
+#HOLDD_BIN="/usr/bin/holdd"
+
+# Nice value to run holdd under
+#HOLDD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#HOLDD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for holdd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+HOLDD_SIGTERM_TIMEOUT=600
